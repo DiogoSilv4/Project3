@@ -1,0 +1,469 @@
+html {
+    margin: 0;
+    padding: 0;
+    background: rgb(48, 48, 48);
+    overflow: hidden;
+    height: max-content;
+}
+
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url('GothaProMed.otf');
+}
+
+
+/* navigation bar */
+
+.nav_bar {
+    background: rgb(39, 39, 39);
+    display: relative;
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* logo at the middle of the navigation bar */
+
+.logo {
+    background: rgb(0, 0, 0);
+    position: absolute;
+    height: auto;
+    /* Resize Logo*/
+    width: 78px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: default;
+    top: 0px;
+    overflow: hidden;
+}
+
+
+/* logo image */
+
+.logo img {
+    top: 0;
+    max-width: 100%;
+    max-height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* left button in the navigation bar */
+
+.menu_button {
+    background: rgb(194, 194, 194);
+    position: relative;
+    height: 47px;
+    width: 58px;
+    top: 20%;
+    left: 30px;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.menu_button img {
+    max-width: 100%;
+}
+
+.menu_button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+/* right button in the navigation bar */
+
+.login {
+    display: default;
+    top: -60%;
+    position: relative;
+    float: right;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+    right: 2%;
+}
+
+.login img {
+    max-width: 100%;
+    border-radius: 100%;
+}
+
+.login img:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+
+/* menu that opens when menu button is clicked */
+
+#menu {
+    left: -300px;
+    transition-duration: 200ms;
+    position: absolute;
+    background: rgb(65, 65, 65);
+    top: 70px;
+    height: auto;
+    width: 300px;
+    font-size: 170%;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu_images:hover {
+    opacity: 0.7;
+}
+
+.MENU_images {
+    position: relative;
+    width: 0;
+    height: 0;
+    border: 0;
+    left: 10%;
+}
+
+.MENU_images>.menu_images {
+    position: absolute;
+    background: white;
+    height: 50px;
+    width: 50px;
+    top: -55px;
+}
+
+#menu p {
+    width: 100%;
+    text-align: left;
+    color: white;
+    margin: 0 0 0 20px;
+    text-align: center;
+    padding: 15px 0px;
+    font-family: Gotham;
+}
+
+#menu a {
+    text-decoration: none;
+    font-family: Gotham;
+}
+
+#menu p:hover {
+    cursor: pointer;
+    background: rgb(82, 82, 82);
+}
+
+
+/* part that opens up when the user button is clicked */
+
+#login {
+    display: none;
+    right: 0.5%;
+    transition-duration: 200ms;
+    position: absolute;
+    background: rgb(65, 65, 65);
+    top: 70px;
+    height: auto;
+    width: 300px;
+    font-size: 140%;
+    overflow: hidden;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.2);
+    font-family: Gotham;
+}
+
+
+/* Logged_OUT its the window that pops up before the user is logged in */
+
+#Logged_OUT form {
+    position: relative;
+    top: 0;
+    text-align: center;
+    color: white;
+}
+
+#Logged_OUT p {
+    position: relative;
+    top: 0%;
+    text-align: center;
+    color: white;
+    font-size: 70%;
+}
+
+#Logged_OUT p u:hover {
+    cursor: pointer;
+}
+
+#Logged_OUT form label:last-child {
+    font-size: 80%;
+    top: -30%;
+}
+
+#Logged_OUT input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+}
+
+#Logged_OUT input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+}
+
+#Logged_OUT form label {
+    font-size: 70%;
+    text-align: left;
+}
+
+
+/* Logged_IN its the window that pops up after the user is logged in */
+
+#Logged_IN p {
+    text-align: center;
+}
+
+
+/* grettings message, saying welcome user */
+
+#greetings {
+    font-size: 30;
+    color: white;
+}
+
+#greetings::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 150px;
+    left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%, 0);
+    background: black;
+}
+
+#Logged_IN u,
+#user_options {
+    text-decoration: none;
+}
+
+#user_options p {
+    width: 100%;
+    padding: 15px 0px;
+    margin: 0;
+    position: relative;
+    color: white;
+}
+
+#logout_button {
+    background: rgb(134, 97, 97);
+    margin: 0;
+    color: black;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+
+#user_options p:hover {
+    cursor: pointer;
+    background: rgb(160, 160, 160);
+}
+
+#logout_button:hover {
+    cursor: pointer;
+    background: rgb(124, 67, 67);
+}
+
+.submit {
+    width: 100%;
+    background: rgb(48, 48, 48);
+    width: 60%;
+    color: white;
+    font: bold;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: Gotham;
+}
+
+.submit:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.container input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(85, 85, 85);
+    box-sizing: border-box;
+    background: #4e4e4e;
+    color: white;
+}
+
+.container input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(85, 85, 85);
+    box-sizing: border-box;
+    background: #4e4e4e;
+    color: white;
+}
+
+
+/* Set a style for the buttons */
+
+.registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.eye {
+    display: block;
+    position: fixed;
+    background: rgb(0, 0, 0);
+    height: 16%;
+    width: 30%;
+    top: 51.9%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid rgb(15, 15, 15);
+}
+
+.eyeball {
+    display: block;
+    position: fixed;
+    background: rgb(255, 255, 255);
+    height: 60%;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #3b3b3b;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid rgb(197, 197, 197);
+    width: 80%;
+    color: white;
+    /* Could be more or less, depending on screen size */
+}
+
+
+/* Add Zoom Animation */
+
+.animate {
+    animation: animatezoom 0.6s;
+}
+
+.animateLogin {
+    /* animation: animaterigth 300ms; */
+    animation: animatezoom 300ms;
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes animaterigth {
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes animateEye {
+    0% {
+        left: 25.625%;
+        top: 47.47081712062257%;
+    }
+    20% {
+        left: 49.125%;
+        top: 68.09338521400778%;
+    }
+    40% {
+        left: 73.6875%;
+        top: 50.06485084306096%;
+    }
+    60% {
+        left: 49.75%;
+        top: 41.50453955901427%;
+    }
+    80% {
+        left: 49.75%;
+        top: 41.50453955901427%;
+    }
+    100% {
+        left: 25.625%;
+        top: 47.47081712062257%;
+    }
+}

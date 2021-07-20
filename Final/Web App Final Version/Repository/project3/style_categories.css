@@ -1,0 +1,53 @@
+.category_body {
+    display: fixed;
+    position: absolute;
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(48, 48, 48);
+    overflow: scroll;
+}
+
+.category_body h1 {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 50;
+    font-family: Gotham;
+    color: white;
+}
+
+.categories_list p {
+    display: inline-block;
+    margin: 8%;
+}
+
+.categories_list p:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.categories_list {
+    text-align: center;
+}
+
+.categories_list a {
+    position: relative;
+    text-decoration: none;
+    background-color: black;
+    display: inline-block;
+    margin: 40px 120px;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.categories_list a:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.categories_list img {
+    max-width: 100%;
+}

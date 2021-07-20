@@ -1,0 +1,178 @@
+.quiz_body {
+    display: fixed;
+    position: absolute;
+    margin-top: 70px;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(48, 48, 48);
+}
+
+.question_image {
+    display: fixed;
+    position: relative;
+    margin-top: 50px;
+    height: 400px;
+    width: 70%;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    overflow: hidden;
+}
+
+.question_image img {
+    width: 100%;
+}
+
+.butttons {
+    display: inline-block;
+}
+
+#True_Button {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    background: rgb(112, 112, 255);
+    opacity: 0.5;
+    float: left;
+    left: 20%;
+    border-radius: 15px;
+    bottom: 19%;
+}
+
+#False_Button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#True_Button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#False_Button {
+    position: absolute;
+    height: 10%;
+    width: 20%;
+    background: rgb(255, 128, 128);
+    opacity: 0.5;
+    float: right;
+    right: 20%;
+    border-radius: 15px;
+    bottom: 19%;
+}
+
+.buttons p {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    bottom: 19%;
+    font-family: Gotham;
+}
+
+#quiz_entrance {
+    display: block;
+}
+
+#textt {
+    background: rgb(39, 39, 39);
+    border: 100px solid rgb(73, 73, 73);
+}
+
+#quiz_entrance p {
+    margin: 50px 80px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Gotham;
+    color: white;
+}
+
+#quiz_entrance h1 {
+    text-align: center;
+    font-family: Gotham;
+    color: white;
+    font-size: 50;
+}
+
+#the_quiz {
+    display: none;
+}
+
+#the_quiz h1 {
+    text-align: center;
+    font-family: Gotham;
+    color: white;
+}
+
+#the_quiz p {
+    text-align: center;
+    font-size: large;
+    font-family: Gotham;
+    color: white;
+}
+
+#quizButton {
+    position: fixed;
+    height: 100px;
+    width: 300px;
+    background: rgb(184, 134, 134);
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 120;
+    margin-top: 50px;
+    font-family: Gotham;
+    color: rgb(112, 73, 73);
+}
+
+#quizButton:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+#quizButton p {
+    position: fixed;
+    top: 50%;
+    font-family: Gotham;
+    color: white;
+}
+
+#backQuiz {
+    display: flex;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 40px;
+    margin: 10px;
+    left: 9%;
+}
+
+#backQuiz img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#backQuiz:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#False_Button p {
+    position: relative;
+    top: 20%;
+    font-family: Gotham;
+    color: white;
+    font-size: 40;
+}
+
+#True_Button p {
+    position: relative;
+    top: 20%;
+    font-family: Gotham;
+    color: white;
+    font-size: 40;
+}

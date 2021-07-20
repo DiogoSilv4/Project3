@@ -1,0 +1,391 @@
+html {
+    margin: 0;
+    padding: 0;
+    background: rgb(48, 48, 48);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.theory_body {
+    display: fixed;
+    position: absolute;
+    margin-top: 70px;
+    background: rgb(48, 48, 48);
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: scroll;
+    text-align: center;
+}
+
+.theory_image {
+    display: fixed;
+    position: relative;
+    margin-top: 50px;
+    height: 600px;
+    width: 60%;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.theory_body h1 {
+    text-align: center;
+    font-family: Gotham;
+    color: white;
+    font-size: 50;
+    display: inline-block;
+}
+
+.theory_body p {
+    text-align: center;
+    font-size: large;
+    margin: 20px 40px 20px 100px;
+    font-family: Gotham;
+    color: white;
+    font-size: 20;
+}
+
+#explanation {
+    margin: 20px 15%;
+    font-size: 25;
+}
+
+.showTheory {
+    display: flex;
+    position: absolute;
+    background: white;
+    height: 150px;
+    width: 60%;
+    left: 20%;
+    margin: 1000px 60px 60px 0px;
+    border-radius: 15px;
+}
+
+.comment-section {
+    position: relative;
+    display: block;
+    list-style: none;
+    width: 60%;
+    margin-bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.comment-section p {
+    color: black;
+}
+
+.comment {
+    display: flex;
+    border-radius: 3px;
+    flex-wrap: wrap;
+}
+
+.comment.user-comment {
+    color: #808080;
+}
+
+.comment.author-comment {
+    color: #60686d;
+    justify-content: flex-end;
+}
+
+
+/* User and time info */
+
+.comment .info {
+    width: 18%;
+}
+
+.comment.user-comment .info {
+    text-align: right;
+}
+
+.comment.author-comment .info {
+    order: 3;
+}
+
+.comment .info a {
+    /* User name */
+    display: inline-block;
+    text-decoration: none;
+    color: #ae9b9b;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 25px 0 3px 0;
+}
+
+.comment .info span {
+    /* Time */
+    display: block;
+    font-size: 14;
+    color: #7a7a7a;
+    left: 50px;
+}
+
+
+/* The comment text */
+
+.comment p {
+    line-height: 1.5;
+    padding: 18px 10px;
+    width: 50%;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.comment.user-comment p {
+    background-color: #f3f3f3;
+}
+
+.comment.author-comment p {
+    background-color: #e2f8ff;
+    order: 1;
+}
+
+.user-comment p:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #f3f3f3;
+    left: -12px;
+    top: 22px;
+}
+
+.author-comment p:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #9d9d9d;
+    right: -12px;
+    top: 30px;
+}
+
+
+/* Comment form */
+
+.write-new {
+    margin: 80px auto 0;
+    width: 50%;
+}
+
+.write-new textarea {
+    color: #444;
+    font: inherit;
+    outline: 0;
+    border-radius: 3px;
+    border: 1px solid #cecece;
+    background-color: #fefefe;
+    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.06);
+    overflow: auto;
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 20px;
+}
+
+.write-new img {
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    visibility: hidden;
+}
+
+.write-new button {
+    float: right;
+    background-color: rgb(184, 134, 134);
+    box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 18px;
+}
+
+.info a {
+    font-size: 20;
+}
+
+.info span {
+    font-size: 20;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 800px) {
+    /* Make the paragraph in the comments take up the whole width,
+    forcing the avatar and user info to wrap to the next line*/
+    .comment p {
+        width: 100%;
+    }
+    /* Reverse the order of elements in the user comments,
+    so that the avatar and info appear after the text. */
+    .comment.user-comment .info {
+        order: 3;
+        text-align: left;
+    }
+    .comment.user-comment .avatar {
+        order: 2;
+    }
+    .comment.user-comment p {
+        order: 1;
+    }
+    /* Align toward the beginning of the container (to the left)
+    all the elements inside the author comments. */
+    .comment.author-comment {
+        justify-content: flex-start;
+    }
+    .comment-section {
+        margin-top: 10px;
+    }
+    .comment .info {
+        width: auto;
+    }
+    .comment .info a {
+        padding-top: 15px;
+    }
+    .comment.user-comment .avatar,
+    .comment.author-comment .avatar {
+        padding: 15px 10px 0 18px;
+        width: auto;
+    }
+    .comment.user-comment p:after,
+    .comment.author-comment p:after {
+        width: 12px;
+        height: 12px;
+        top: initial;
+        left: 28px;
+        bottom: -6px;
+    }
+    .write-new {
+        width: 100%;
+    }
+}
+
+#bottom_space {
+    background: red;
+    position: absolute;
+    display: block;
+    margin: 100px;
+}
+
+.fa-star:before {
+    content: "\ffff00";
+}
+
+#favoryte:hover {
+    cursor: pointer;
+}
+
+#percentageLine {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.subtitles {
+    display: inline-block;
+}
+
+.subtitles p {
+    transform: translate(0, -100%);
+    margin-left: 40px;
+}
+
+#percentageBar {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 60px;
+    background: white;
+    border-radius: 40px;
+}
+
+.bars {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    text-align: center;
+}
+
+.bars p {
+    opacity: 1;
+    margin: 0;
+    transform: translate(0, 100%);
+}
+
+#believers {
+    width: 0;
+    background: blue;
+    opacity: 0.5;
+    left: 0;
+    border-radius: 40px 0 0 40px;
+}
+
+#nonbelievers {
+    width: 0;
+    background: red;
+    opacity: 0.5;
+    right: 0;
+    border-radius: 0 40px 40px 0;
+}
+
+#title {
+    display: block;
+    position: relative;
+}
+
+#favoryte {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    width: 30px;
+    border-radius: 100px;
+    background-color: rgba(110, 110, 110, 0.671);
+    transform: translate(100%, -25%)
+}
+
+#backQuiz {
+    display: flex;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 40px;
+    margin: 10px;
+    left: 9%;
+}
+
+#backQuiz img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#backQuiz:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.write-new {
+    margin-bottom: 200px;
+}

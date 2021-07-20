@@ -1,0 +1,50 @@
+.Images {
+    display: flex;
+    position: absolute;
+    height: 700px;
+    width: 1180px;
+    top: 70px;
+    left: 50%;
+    overflow: hidden;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.Images img {
+    top: 0;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.buttons {
+    display: block;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    bottom: 5%;
+    width: 100%;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 300px;
+    background: rgb(184, 134, 134);
+    border-radius: 50px;
+    margin: 40px 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button p {
+    font-size: 30;
+    color: white;
+}
+
+.button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
